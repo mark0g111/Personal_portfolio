@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Project_b
 
 
 def all_blogs(request):
-    return render(request, 'blog/all_blogs.html')
+    projects = Project_b.objects.all()
+    return render(request, 'blog/all_blogs.html', {'projects': projects})
