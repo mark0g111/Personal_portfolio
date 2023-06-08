@@ -1,9 +1,9 @@
 This is new blog!
 
-{% for project in projects %}
+{% for blog in blogs %}
 
-<h2>{{ project.title }}</h2>
-<p>{{ project.date }}</p>
-<p>{{ project.description }}</p>
+<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+<p>{{ blog.date }}</p>
+<p>{{ blog.description }}</p>
 
 {% endfor %}
