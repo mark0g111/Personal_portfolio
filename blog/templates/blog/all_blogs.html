@@ -1,3 +1,6 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
 This is new blog!
 
 <h2>There are {{ blogs.count }} blogs</h2>
@@ -9,3 +12,5 @@ This is new blog!
 <p>{{ blog.description }}</p>
 
 {% endfor %}
+
+{% endblock %}
